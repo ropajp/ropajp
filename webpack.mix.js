@@ -16,9 +16,9 @@ const mix = require('laravel-mix');
    .sass('resources/sass/app.scss', 'public/css')
    .version();
 
-// if (mix.config.inProduction) {
-//     mix.version();
-// }
+ if (mix.config.inProduction) {
+     mix.version();
+ }
 // else {
 //     mix.browserSync({
 //         proxy:     'localhost:3000',
