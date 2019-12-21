@@ -1,0 +1,152 @@
+.form {
+
+  &--wrapper {
+       margin: 1rem auto;
+       max-width: 700px;
+       padding: 1.2rem 0;
+       background-color: #FFFAFA;
+  }
+
+  &--loginwrapper {
+      margin-top: 2rem;
+  }
+
+
+ &--registerwrapper {
+   margin-top: 3rem;
+ }
+
+  &--routeWrapper {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $grey-3;
+  }
+
+  &__headmsg {
+    padding-bottom: 2rem;
+    text-align: center;
+    }
+
+  &__msg {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    display: block;
+    font-size: 1rem;
+    height: 3rem;
+    margin-left: 2.7rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    }
+
+  &__text {
+    border-radius: .25rem;
+    border: 1px solid $grey-3;
+  }
+
+  &__label {
+    margin-left: 2.7rem;
+  }
+
+  &__upperButton {
+    border: 1px solid $blue;
+    border-radius: .15rem;
+    color: white;
+    background-color: $blue;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.8rem;
+      }
+  &__button {
+    border: 1px solid $red;
+    border-radius: .15rem;
+    color: white;
+    background-color: $red;
+    cursor: pointer;
+  }
+}
+
+// タブレット向け
+@media screen and (min-width:768px) and (max-width: 1024) {
+  .form {
+    &__headmsg {
+        margin-right: 6rem;
+      }
+  }
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+  .form {
+
+    &--wrapper {
+         margin: 1rem auto;
+         max-width: 700px;
+         padding: 1.2rem 0;
+         background-color: #FFFAFA;
+    }
+
+    &--loginwrapper {
+        margin-top: 8rem;
+    }
+
+
+   &--registerwrapper {
+     margin-top: 3rem;
+   }
+
+    &--routeWrapper {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $grey-3;
+    }
+
+    &__headmsg {
+        margin-right: 4rem;
+      }
+
+    &__msg {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      display: block;
+      font-size: 1rem;
+      height: 3rem;
+      margin-left: 4  rem;
+      margin-bottom: 2rem;
+      width: 80%;
+      }
+
+    &__text {
+      border-radius: .25rem;
+      border: 1px solid $grey-3;
+    }
+
+    &__label {
+      margin-left: 2.7rem;
+    }
+
+    &__upperButton {
+      border: 1px solid $blue;
+      border-radius: .15rem;
+      color: white;
+      background-color: $blue;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      line-height: 2.8rem;
+        }
+    &__button {
+      border: 1px solid $red;
+      border-radius: .15rem;
+      color: white;
+      background-color: $red;
+      cursor: pointer;
+    }
+  }
+}

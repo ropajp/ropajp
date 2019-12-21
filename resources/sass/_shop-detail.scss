@@ -1,0 +1,180 @@
+.shop-detail {
+
+    &__favorite-btn {
+    position: absolute;
+    right: .3rem;
+    top: 8.5em;
+  }
+
+  &__pane {
+    margin: 0  1.5rem;
+    word-wrap: break-word;
+  }
+
+  &__intro {
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+ &__username {
+   font-size: 1.5rem;
+   margin: 0 0 .5rem 0;
+ }
+
+ &__state {
+   color: $grey-1;
+   font-size: .95rem;
+   margin: .1rem 0;
+ }
+
+  &__category {
+    color: $grey-2;
+    font-size: .95rem;
+    margin: .1rem;
+  }
+
+  &__bussiness-info {
+    color: $grey-2;
+    font-size: .95rem;
+  }
+
+  &__content {
+    font-size: 15px;
+  }
+
+  &__sub-content {
+    color: $grey-2;
+  }
+
+  &__sub-title {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #808080;
+  }
+
+  &__form {
+    border-bottom: 1px solid #808080;
+    margin-bottom: 7px;
+    padding-bottom: 4px;
+  }
+
+  &__item {
+    border: 1px solid $grey-3;
+  }
+
+  &__comments {
+    font-size: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__commentItem {
+    border-bottom: 1px solid $grey-3;
+    margin-bottom: 1rem;
+    padding: 0 0 1rem 0;
+  }
+
+  &__commentBody {
+    margin: 0 0 1rem 0;
+  }
+
+  &__commentInfo {
+    color: $grey-2;
+    margin: 0;
+  }
+}
+
+// タブレット向け
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+  .shop-detail {
+     margin-top: 4.3rem;
+      &__favorite-btn {
+      position: absolute;
+      right: .3rem;
+      top: 5.5em;
+    }
+
+    &__pane {
+      margin: 0  1.5rem;
+    }
+
+    &__intro {
+      margin-bottom: 3rem;
+    }
+
+   &__username {
+     font-size: 2rem;
+     margin-bottom: .55rem;
+   }
+
+   &__state {
+     color: $grey-2;
+     font-size: 1.1rem;
+     margin: .55rem 0;
+   }
+
+    &__category {
+      color: $grey-3;
+      font-size: 1.1rem;
+      margin: .55rem 0;
+    }
+
+    &__content {
+      color: $grey-1;
+      font-size: 1rem;
+    }
+
+    &__sub-content {
+      color: $grey-2;
+      font-size: 1.1rem;
+    }
+
+    &__title {
+      font-size: 1.3rem;
+      border-bottom: 1px solid #808080;
+    }
+
+    &__form {
+      border-bottom: 1px solid #808080;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+    }
+
+    &__item {
+      border: 1px solid $grey-2;
+      font-size: 15px;
+      height: 5rem;
+    }
+
+    &__comments {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__commentItem {
+      border-bottom: 1px solid $grey-3;
+      margin-bottom: 1rem;
+      padding: 0 0 1rem 0;
+    }
+
+    &__commentBody {
+      margin: 0 0 1rem 0;
+      font-size: 16px;
+    }
+
+    &__commentInfo {
+      color: $grey-2;
+      margin: 0;
+    }
+  }
+}

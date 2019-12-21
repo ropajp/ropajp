@@ -1,0 +1,70 @@
+.favorite {
+  border-radius: .50rem;
+  cursor: pointer;
+   display: inline-block;
+  font-family: inherit;
+  font-size: .9rem;
+  line-height: 2;
+  outline: none;
+  padding: .5rem .75rem;
+  text-decoration: none;
+
+ &--favorite {
+   .icon {
+     color: $grey-1;
+     margin-right: .3em;
+   }
+ }
+
+.icon {
+  margin-left: .3rem;
+}
+
+  &--favorited {
+    background: $red;
+    color: #fff;
+       .icon {
+         background: $red;
+         color: #fff;
+       }
+     }
+}
+// タブレット向け
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+  .favorite {
+    border-radius: .50rem;
+    cursor: pointer;
+     display: inline-block;
+    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 2;
+    outline: none;
+    padding: .5rem .75rem;
+    text-decoration: none;
+
+   &--favorite {
+     .icon {
+       color: $grey-1;
+       margin-right: .5em;
+     }
+   }
+
+  .icon {
+    margin-left: .5rem;
+  }
+
+    &--favorited {
+      background: $red;
+      color: #fff;
+         .icon {
+           background: $red;
+           color: #fff;
+         }
+       }
+   }
+}

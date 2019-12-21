@@ -1,0 +1,67 @@
+.button {
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 2;
+  outline: none;
+  text-decoration: none;
+
+  &--middle {
+      border-radius: .25rem;
+  }
+
+  &--middle--link {
+    border-radius: .25rem;
+    padding: .5rem .10rem;
+  }
+
+  &--inverse {
+      background: $teal;
+      border-color: $teal;
+      color: #fff;
+      transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    background: $teal;
+    color: #fff;
+    opacity: .8;
+  }
+}
+
+  &--fluid {
+   width: 100%;
+   }
+}
+
+// タブレット向け
+@media screen and (min-width:768px) and (max-width: 1024) {
+  .button {
+    &--middle {
+      font-size: 1rem;
+      padding: .5rem .75rem;
+    }
+
+  &--middle--link {
+    font-size: 1rem;
+    border-radius: .25rem;
+    padding: 1rem 1rem;
+    margin: 0 .15rem;
+  }
+ }
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+  .button {
+    &--middle {
+      font-size: 1rem;
+      padding: .5rem .75rem;
+    }
+
+    &--middle--link {
+      border-radius: .25rem;
+      font-size: 1rem;
+      margin: 0 .15rem;
+      padding: 1rem 1rem;
+    }
+  }
+}

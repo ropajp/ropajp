@@ -1,0 +1,59 @@
+// スマホ向け
+.home {
+  position: relative;
+    &__photo {
+        background-image: url(/img/6C565A8F-70DB-4776-BF02-3AA5101A184D.JPG);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40rem;
+        opacity: 0.8;
+  }
+  &__search {
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    position: relative;
+    top: 45%;
+  }
+  .search {
+    &__searchBar {
+      width: 80%;
+    }
+    &__magnify {
+      width: 3rem;
+    }
+  }
+}
+
+// タブレット向け
+@media screen and (min-width:768px) and (max-width: 1024) {
+  .home {
+    .search {
+      &__magnify {
+        width: 4rem;
+      }
+    }
+  }
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+  .home {
+    margin-top: 4rem;
+    &__photo {
+        background-image: url(/img/6C565A8F-70DB-4776-BF02-3AA5101A184D.JPG);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        opacity: 0.8;
+  }
+
+    .search {
+      &__magnify {
+        width: 4rem;
+      }
+    }
+  }
+}
