@@ -6,10 +6,6 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>{{ config('app.name') }}</title>
-
-  <!-- Scripts -->
-  <script src="{{ mix('/js/app.js') }}" defer></script>
-
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <script src="https://kit.fontawesome.com/bff0966233.js"></script>
@@ -22,5 +18,7 @@
 </head>
 <body>
   <div id="app"></div>
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 </html>
