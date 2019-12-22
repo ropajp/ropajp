@@ -10,21 +10,16 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
- mix.browserSync('ropa.test')
-   .js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .version();
-
  if (mix.config.inProduction) {
-     mix.version();
- }
-// else {
-//     mix.browserSync({
-//         proxy:     'localhost:3000',
-//         startPath: '/'
-//     });
-// }
+    mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .version();
+ } else {
+  mix.browserSync('ropa.test')
+  .js('resources/js/app.js', 'public/js')
+  .sass('resources/sass/app.scss', 'public/css')
+  .version();
+ };
 
 const path = require('path');
 
