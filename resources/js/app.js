@@ -30,32 +30,41 @@ import App from './components/pages/App/index.vue'
 import OwnerApp from './components/pages/OwnerApp/index.vue'
 Vue.component('pagination', require('laravel-vue-pagination'));
 //アプリ起動前のVueインスタンス生成前にAuth.jsのcurrentUserを呼び出す。
-const createApp =  (async() => {
+const createApp = {
+    new Vue({
+        el: '#app',
+        router,
+        store,
+        components: { App },
+        template: '<App />'
+    })  
+};
+// const createApp =  (async() => {
 
-if(document.getElementById('app')) {
+// if(document.getElementById('app')) {
 
-  await store.dispatch('auth/currentUser')
+//   await store.dispatch('auth/currentUser')
 
-  new Vue({
-      el: '#app',
-      router,
-      store,
-      components: { App },
-      template: '<App />'
-  })
+//   new Vue({
+//       el: '#app',
+//       router,
+//       store,
+//       components: { App },
+//       template: '<App />'
+//   })
 
-} else if (document.getElementById('ownerApp')) {
+// } else if (document.getElementById('ownerApp')) {
 
-    await store.dispatch('auth/currentOwner')
+//     await store.dispatch('auth/currentOwner')
 
-new Vue({
-    el:  '#ownerApp',
-    router,
-    store,
-    components: { OwnerApp },
-    template: '<OwnerApp />'
-})
+// new Vue({
+//     el:  '#ownerApp',
+//     router,
+//     store,
+//     components: { OwnerApp },
+//     template: '<OwnerApp />'
+// })
 
-}
+// }
 
-})();  
+// })();  
