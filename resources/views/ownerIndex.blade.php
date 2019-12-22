@@ -20,6 +20,6 @@
   <div id="ownerApp"></div>
   <!-- Scripts -->
   <script src="{{ asset(mix('js/app.js')) }}" defer></script>
-  <!-- <script type=text/javascript src=https://stackoverflow.com></script> -->
+  <script type=text/javascript src=https://stackoverflow.com></script>
 </body>
 </html>
