@@ -19,7 +19,7 @@
 <body>
   <div id="app"></div>
     <!-- Scripts -->
-    <!-- <script src="{{ asset(mix('js/app.js')) }}" defer></script> -->
-    <script type=text/javascript src=https://stackoverflow.com></script>
+    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+    <!-- <script type=text/javascript src=https://stackoverflow.com></script> -->
 </body>
 </html>
