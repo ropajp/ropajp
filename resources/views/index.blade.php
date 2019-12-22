@@ -1,4 +1,4 @@
-<!-- <!doctype html> -->
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
   <meta charset="utf-8">
@@ -19,6 +19,7 @@
 <body>
   <div id="app"></div>
     <!-- Scripts -->
-    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+    <!-- <script src="{{ asset(mix('js/app.js')) }}" defer></script> -->
+    <script type=text/javascript src=https://stackoverflow.com></script>
 </body>
 </html>
