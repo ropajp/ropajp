@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 // 一般ユーザグループ - 未認証
 Route::namespace('Auth')->group(function(){
 // 一般ユーザ新規登録
-Route::post('/register', 'OwnerRegisterController@register')->name('register');
+Route::post('/register', 'RegisterController@register')->name('register');
 // 一般ユーザログイン
 Route::post('/login', 'LoginController@login')->name('login');
 // 一般ユーザログアウト
@@ -56,7 +56,7 @@ Route::prefix('shops')->name('shop')->group(function() {
 // 未登録店舗ユーザグループ -  未認証
 Route::namespace('Shop')->prefix('owners')->name('shop')->group(function() {
     // 店舗新規登録
-    Route::post('/ownerRegister', 'RegisterController@register')->name('register');
+    Route::post('/ownerRegister', 'OwnerRegisterController@register')->name('register');
     // 店舗ログイン
     Route::post('/ownerLogin', 'LoginController@login')->name('login');
     // 店舗ログアウト
