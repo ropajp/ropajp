@@ -15,6 +15,8 @@ import NotFound from './components/atoms/NotFoundError/index.vue'
 import ShopDetail from './components/templates/ShopDetail/index.vue'
 // 店舗リスト
 import ShopList from './components/templates/ShopList/index.vue'
+// 利用規約
+import TermsOfService from './components/templates/TermsOfService/index.vue'
 // カスタマーページ
 // ホームページ
 import Home from './components/templates/Home/index.vue'
@@ -54,6 +56,11 @@ const routes = [
   {
     path: '/',
     component: Home
+  },
+  //利用規約
+  {
+    path: '/terms-of-service',
+    component: TermsOfService 
   },
   // 店舗リスト画面 key: 検索入力値
   {

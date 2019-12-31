@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
           <RouterLink class="navbar__brand" to="/">
-              Ropa.com
+              Ropa.jp
           </RouterLink>
           <SearchBar
               class="navbar__search"

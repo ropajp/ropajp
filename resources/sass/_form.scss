@@ -50,6 +50,11 @@
     margin-left: 2.7rem;
   }
 
+  &__terms-of-service {
+    padding: 0 15px;
+    text-align: center;
+  }
+  
   &__upperButton {
     border: 1px solid $blue;
     border-radius: .15rem;
@@ -60,6 +65,7 @@
     text-align: center;
     line-height: 2.8rem;
       }
+
   &__button {
     border: 1px solid $red;
     border-radius: .15rem;

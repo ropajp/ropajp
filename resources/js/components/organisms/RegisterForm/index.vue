@@ -18,12 +18,18 @@
                     v-model="form"
                     :passwordConfirmationLabel="passwordConfirmationLabel"
                 />
+                <p class="form__terms-of-service">
+                  「新規会員登録」のボタンを押すことにより、
+                    <RouterLink to="/terms-of-service">
+                      利用規約
+                    </RouterLink>
+                    に同意したものとみなします。
+                </p>
                 <button type="submit" class="form__item form__button">新規会員登録</button>
             </form>
         </div>
 </template>
 <script>
-
   import Name from '../../molecules/Name/index.vue'
   import Email from '../../molecules/Email/index.vue'
   import Password from '../../molecules/Password/index.vue'
