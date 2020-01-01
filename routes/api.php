@@ -56,7 +56,7 @@ Route::prefix('shops')->name('shop')->group(function() {
 // 未登録店舗ユーザグループ -  未認証
 Route::namespace('Shop')->prefix('owners')->name('shop')->group(function() {
     // 店舗新規登録
-    Route::post('/ownerRegister', 'OwnerRegisterController@register')->name('register');
+    Route::post('/ownerRegister', 'RegisterController@register')->name('register');
     // 店舗ログイン
     Route::post('/ownerLogin', 'LoginController@login')->name('login');
     // 店舗ログアウト
