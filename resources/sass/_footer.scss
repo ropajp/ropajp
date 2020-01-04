@@ -1,71 +1,87 @@
 .footer {
       box-sizing: border-box;
         &__wrapper {
-            width: 100%;
-            padding: 2rem 0;
-            align-items: center;
             border-top: 1px solid $grey-4;
-            justify-content: center;
-            bottom: 0;
+            bottom: 0;      
+            height: 8rem;    
+            width: 100%;
           }
 
       &__brand {
         color: inherit;
+        display: block;
         font-family: Merriweather, serif;
         font-weight: bold;
         font-size: 1.2rem;
+        margin: 0 auto;
+        text-align: center;
         text-decoration: none;
+
+      }
+      
+      &__items {
+        color: $grey-2;
+        display: block;
+        line-height: 3rem;
+        text-align: center;
+        text-decoration: none;
+      }
+      
+      &__copyright {
+        color: $grey-3;
+        display: block;
+        text-align: center;
       }
    }
 
 // タブレット向け
 @media screen and (min-width:768px) and (max-width: 1024px) {
   .footer {
-      bottom: 0;
-      display: flex;
-      box-sizing: border-box;
+      // bottom: 0;
+      // display: flex;
+      // box-sizing: border-box;
           &__wrapper {
-            width: 100%;
-            padding: 30px 0;
-            align-items: center;
-             border-top: 1px solid $grey-4;
-            display: flex;
-            justify-content: center;
-            bottom: 0;
+            // width: 100%;
+            // padding: 30px 0;
+            // align-items: center;
+            //  border-top: 1px solid $grey-4;
+            // display: flex;
+            // justify-content: center;
+            // bottom: 0;
           }
 
       &__brand {
-        color: inherit;
-        font-family: Merriweather, serif;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-decoration: none;
+        // color: inherit;
+        // font-family: Merriweather, serif;
+        // font-weight: bold;
+        // font-size: 1.2rem;
+        // text-decoration: none;
       }
    }
 }
-
+// PC向け
 @media screen and (min-width:1024px) {
   .footer {
-      bottom: 0;
-      display: flex;
-      box-sizing: border-box;
-      position: relative;
-          &__wrapper {
-            width: 100%;
-            padding: 30px 0;
-            align-items: center;
-             border-top: 1px solid $grey-4;
-            display: flex;
-            justify-content: center;
-            bottom: 0;
-          }
-
-      &__brand {
-        color: inherit;
-        font-family: Merriweather, serif;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-decoration: none;
+      &__wrapper {
+        // align-items: center;
+        // border-top: 1px solid $grey-4;
+        // bottom: 0;      
+        // height: 10rem;    
+        // justify-content: center;
+        // padding: 2rem 0;
+        // width: 100%;
       }
-   }
+
+  &__brand {
+    
+  }
+  
+  &__items {
+    
+    
+  }
+  
+  &__copyright {
+  }
+ }
 }
