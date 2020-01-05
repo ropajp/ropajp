@@ -4,7 +4,7 @@
           <div class="form--routeWrapper">
               <Paragraph class="form__msg" :msg="msg" />
               <Route
-                  class="form__item form__upperButton"
+                  class="fform__upperButton"
                   :to="to"
                   :btnName="btnName"
               />

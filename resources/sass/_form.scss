@@ -11,10 +11,9 @@
       margin-top: 2rem;
   }
 
-
- &--registerwrapper {
-   margin-top: 3rem;
- }
+  &--registerwrapper {
+    margin-top: 3rem;
+  }
 
   &--routeWrapper {
     margin-bottom: 3rem;
@@ -25,7 +24,7 @@
   &__headmsg {
     padding-bottom: 2rem;
     text-align: center;
-    }
+  }
 
   &__msg {
     text-align: center;
@@ -39,7 +38,7 @@
     margin-left: 2.7rem;
     margin-bottom: 2rem;
     width: 80%;
-    }
+  }
 
   &__text {
     border-radius: .25rem;
@@ -64,7 +63,7 @@
     text-decoration: none;
     text-align: center;
     line-height: 2.8rem;
-      }
+    }
 
   &__button {
     border: 1px solid $red;
@@ -138,21 +137,22 @@
     }
 
     &__upperButton {
-      border: 1px solid $blue;
-      border-radius: .15rem;
-      color: white;
-      background-color: $blue;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      line-height: 2.8rem;
-        }
+      // border: 1px solid $blue;
+      // border-radius: .15rem;
+      // color: white;
+      // background-color: $blue;
+      // cursor: pointer;
+      // text-decoration: none;
+      // text-align: center;
+      // line-height: 2.8rem;
+    }
+
     &__button {
-      border: 1px solid $red;
-      border-radius: .15rem;
-      color: white;
-      background-color: $red;
-      cursor: pointer;
+      // border: 1px solid $red;
+      // border-radius: .15rem;
+      // color: white;
+      // background-color: $red;
+      // cursor: pointer;
     }
   }
 }
