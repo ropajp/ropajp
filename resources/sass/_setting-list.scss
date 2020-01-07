@@ -1,0 +1,13 @@
+.setting {
+  &__item {
+    border-bottom: 1px solid $grey-4;
+    color: $grey-1;
+    display: block;
+    height: 3rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    &:hover {
+      color: $grey-2;
+    }
+  }
+}

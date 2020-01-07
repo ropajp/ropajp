@@ -1,0 +1,127 @@
+// スマホ向け
+.navbar {
+    background: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+    height: 8rem;
+    left: 0;
+    padding: .5rem;
+    right: 0;
+    top: 0;
+    z-index: 3;
+
+    &__brand {
+        color: inherit;
+        font-family: Merriweather, serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-right: 0;
+        position: relative;
+        text-decoration: none;
+      }
+
+      &__search {
+         display: inline-block;
+         left: 5%;
+         position: absolute;
+        top: 4rem;
+        width: 90%;
+       }
+
+       .search {
+         &__searchBar {
+           border: 1px solid $grey-3;
+           font-size: 16px;
+           height: 3rem;
+           margin-right: -.3rem;
+           width:  85%;
+         }
+
+         &__magnify {
+           border: 1px solid $red;
+           height: 3rem;
+           width: 2.6rem;
+         }
+       }
+
+      &__auth {
+        position: relative;
+        float: right;
+      }
+
+  &--register {
+    background-color: $red;
+    border-color: 1px solid;
+    color: white;
+    margin: 0 .1rem;
+
+      &:hover {
+        background-color: $danger;
+      }
+  }
+
+  &--login {
+    border: 1px solid $grey-2;
+    color: $grey-1;
+    margin: 0 .1rem;
+
+      &:hover {
+        border-color: black;
+        color: black;
+      }
+   }
+}
+
+// タブレット向け
+@media screen and (min-width:768px) and (max-width: 1024) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    .navbar {
+     &__auth {
+       position: absolute;
+     }
+   }
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+  .navbar {
+      align-items: center;
+      display: flex;
+      height: 3rem;
+      padding: 2%;
+      position: fixed;
+
+    &__search {
+       left: 2rem;
+       padding: 1rem;
+       position: relative;
+       top: 0;
+      width: 50%;
+     }
+
+     .search {
+       &__searchBar {
+         height: 3rem;
+         width:  50%;
+       }
+       &__magnify {
+         height: 3rem;
+         width: 2.6rem;
+       }
+     }
+
+    &__auth {
+      position: absolute;
+      right: 2rem;
+    }
+
+    &__configLink {
+    color: $grey-2;
+    text-decoration: none;
+      &:hover {
+        color: black;
+        border-color: black;
+      }
+    }
+  }
+}

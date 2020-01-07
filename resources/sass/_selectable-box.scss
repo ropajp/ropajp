@@ -1,0 +1,20 @@
+.selectable-box {
+    float: left;
+    margin: 5px;
+    position: relative;
+}
+
+.selectable-box i {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  color: $teal;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.active {
+         padding: 0;
+         margin: 0;
+     }

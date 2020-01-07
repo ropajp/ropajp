@@ -1,0 +1,16 @@
+.shop-list {
+       margin: 2rem .5rem;
+       padding-bottom: 6rem;
+}
+
+// タブレット向け
+@media screen and (min-width:768px) and (max-width: 1024) {
+
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+    .shop-list {
+      margin: 6rem 2rem;
+    }
+}
