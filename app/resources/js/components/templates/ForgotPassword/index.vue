@@ -49,7 +49,7 @@
         status: false,
         errors: null,
         msg: 'ログイン画面はこちら',
-        passwordChangeMsg: 'パスワードを変更するために、パスワード変更用メールを送信してください。',
+        passwordChangeMsg: 'パスワードを変更するために、登録したアドレスを入力しパスワード変更用メールを送信してください。',
         btnName: 'ログイン',
         to: '/login'
       }
@@ -76,7 +76,7 @@
 
             this.message = response.data.message
             alert(this.message)
-            // トップページに遷移する
+            // ログインページに遷移する
             this.$router.push('/login')
           }
       }

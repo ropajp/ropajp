@@ -33,11 +33,11 @@
 @endcomponent
 @endisset
 
-{{-- Outro Lines --}}
+<!-- {{-- Outro Lines --}}
 @foreach ($outroLines as $line)
 {{ $line }}
 
-@endforeach
+@endforeach -->
 
 {{-- Salutation --}}
 @if (! empty($salutation))

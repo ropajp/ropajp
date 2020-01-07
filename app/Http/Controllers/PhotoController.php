@@ -31,7 +31,7 @@ class PhotoController extends Controller
         $extension = $request->photo->extension();
 
         $photo = new Photo();
-
+        
         // インスタンス生成時に割り振られたランダムなIDと本来の拡張子を組み合わせてファイル名とする
         $photo->filename = $photo->id . '.' . $extension;
 
@@ -58,10 +58,30 @@ class PhotoController extends Controller
         // リソースの新規作成なので、
         // レスポンスコードは201(CREATED)を返却する
         $shops = Shop::with('photos')->where('id', $request->id)->first();
+
+        // 店舗IDに紐づく写真の数をカウント
+        $count = $shops->photos()->count();
+        // もし写真が一枚だけ(一番最初の写真なら)
+        if($count === 1) {
+            // トランザクション開始
+            DB::beginTransaction();
+            try {
+                // カバー写真のフラグを立てる
+                $shops->photos()->update(['cover_photo_flg' => 1]);
+                // コミット
+                DB::commit();
+            } catch(\Exception $exception) {
+                // ロールバック
+                DB::rollback();
+                throw $exception;
+            }
+        }
+
+        // フロント側に店舗情報を返す
         return response()->json([
-                                        'shop' =>$shops,
-                                        'status' => 201
-                                    ]);
+                        'shop' =>$shops,
+                        'status' => 201
+                    ]);
     }
     /**
     * 写真削除
@@ -100,9 +120,10 @@ class PhotoController extends Controller
          // トランザクション開始
          DB::beginTransaction();
          try {
-             Photo::where('shop_id', $request->id)
+            // 最初に写真のカバーフラグを全て0にする
+            Photo::where('shop_id', $request->id)
                     ->update(['cover_photo_flg' => 0]);
-
+            // 選択された写真にカバーフラグを立てる
             Photo::where('id', $request->photo)
                     ->update(['cover_photo_flg' => 1]);
 

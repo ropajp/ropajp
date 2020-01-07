@@ -1,8 +1,8 @@
 <?php
 /***************************
-**      店舗一覧取得API          **
+**      店舗一覧取得API     **
 **    店舗詳細情報取得API    **
-**             お気に入りAPI        **
+**     お気に入りAPI        **
 ***************************/
 
 namespace App\Http\Controllers;
@@ -37,7 +37,7 @@ class ShopController extends Controller
         /**
         * 店舗一覧取得ORM
         * テーブル - shops
-        * リレーション - photos
+        * リレーション - photos - favorites
         */
         // 受け取った値が$allまたは空欄なら
         if($key === '$all' || $key === '') {
@@ -57,14 +57,13 @@ class ShopController extends Controller
 
             // リクエストされた値があるレコードを取得
             $shops = Shop::with(['photos' => function($query) {
-                        $query->first();
+                        $query->where('cover_photo_flg', 1);
                 }, 'favorites'])
             ->where(function($query) use ($arrayKeys) {
                 foreach($arrayKeys as $arrayKey) {
                     $query->orWhere('shops.name', 'like', "%{$arrayKey}%")
                           ->orWhere('shops.state', 'like', "%{$arrayKey}%")
                           ->orWhere('shops.city', 'like', "%{$arrayKey}%")
-                        //  ->orWhere('shops.town_street', 'like', "%{$arrayKey}%")
                           ->orWhere('shops.category', 'like', "%{$arrayKey}%")
                            ->orWhere('shops.brands', 'like', "%{$arrayKey}%")
                           ->orWhere('shops.gender_for', 'like', "%{$arrayKey}%")
