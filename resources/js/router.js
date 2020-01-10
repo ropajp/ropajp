@@ -24,8 +24,10 @@ import Home from './components/templates/Home/index.vue'
 import Login from './components/templates/Login/index.vue'
 // カスタマー新規登録画面
 import Register from './components/templates/Register/index.vue'
-// カスタマーパスワードリセットページ
+// カスタマーパスワードリセットメール送信用ページ
 import ForgotPasswords from './components/templates/ForgotPassword/index.vue'
+// カスタマーパスワードリセット実行
+import ResetPasswords from './components/templates/ResetPassword/index.vue'
 // 店舗ページ
 // 店舗ログインページ
 import OwnerLogin from './components/templates/OwnerLogin/index.vue'
@@ -106,9 +108,28 @@ const routes = [
       }
     }
   },
+  // パスワード変更のためのリンク送信用メールAPI
   {
     path: '/forgot-passwords',
     component: ForgotPasswords,
+    // 画面遷移する前にチェック
+    beforeEnter(to, from, next) {
+      // もしカスタマーがログインユザーなら
+      if(store.getters['auth/userCheck']) {
+        // POPUP表示
+        alert('このページを利用するためにはログアウトする必要があります。')
+        // ホーム画面へ遷移
+        next('/')
+        // それ以外なら
+      } else {
+        // 次の処理へ移動
+        next()
+      }
+    }
+  },
+  {
+    path: '/api/password/reset',
+    component: ResetPasswords,
     // 画面遷移する前にチェック
     beforeEnter(to, from, next) {
       // もしカスタマーがログインユザーなら

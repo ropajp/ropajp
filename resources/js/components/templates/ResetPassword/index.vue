@@ -1,13 +1,6 @@
 <template>
   <div class="form--wrapper">
       <div class="form--loginwrapper">
-          <div class="form--routeWrapper">
-          <Paragraph class="form__headmsg" :msg="msg"/>
-          <Route
-              :to="to" :btnName="btnName"
-              class="form__item form__upperButton"
-              />
-          </div>
           <div v-show="loading" class="panel">
             <Loader>送信中...</Loader>
           </div>
@@ -17,8 +10,19 @@
           <form class="form" @submit.prevent="reset" v-show="! loading">
           　<LoginError />
           　<Paragraph class="form__headmsg" :msg="passwordChangeMsg" /><br>
-            <Email v-model="form"/>
-            <button type="submit" class="form__item form__button">メールを送信</button>
+            <Email
+                 v-model="form" 
+                 :emailLabel="emailLabel"
+                 />
+            <Password 
+                v-model="form" 
+                :passwordLabel="passwordLabel"
+                />
+            <PasswordConfirmation 
+                v-model="form"
+                :passwordConfirmationLabel="passwordConfirmationLabel"
+            />
+            <button type="submit" class="form__item form__button">パスワードリセット</button>
           </form>
           </div>
   </div>
@@ -30,26 +34,36 @@
   import Route from '../../atoms/Route/index.vue'
   import LoginError from '../../molecules/LoginError/index.vue'
   import Email from '../../molecules/Email/index.vue'
+  import Password from '../../molecules/Password/index.vue'
+  import PasswordConfirmation from '../../molecules/PasswordConfirmation/index.vue'
 
   export default {
     components: {
       Loader,
-      Paragraph,
       LoginError,
+      Paragraph,
       Route,
-      Email
+      Email,
+      Password,
+      PasswordConfirmation
      },
     data() {
       return {
         form: {
-          email: ''
+          email: '',
+          password: '',
+          password_confirmation: '',
+          token: ''
         },
         loading: false,
-        message: null,
+        message: 'パスワードの変更が完了しました。ログインしてください。',
         status: false,
         errors: null,
+        emailLabel: 'メールアドレス',
+        passwordLabel: '新規パスワード',
+        passwordConfirmationLabel: '確認用パスワード',
         msg: 'ログイン画面はこちら',
-        passwordChangeMsg: 'パスワードを変更するために、登録したアドレスを入力しパスワード変更用メールを送信してください。',
+        passwordChangeMsg: '新しいパスワードを入力してください。',
         btnName: 'ログイン',
         to: '/login'
       }
@@ -61,20 +75,17 @@
     },
     methods: {
       async reset() {
-
+          this.form.token = this.$route.query.token
           // ローディングメッセージ表示
           this.loading = true
-
           // Auth.jsのログインAPIを呼び出す
-          const response = await axios.post('/api/password/email', this.form)
-
+          const response = await axios.post(`/api/password/reset`, this.form)
+        
           // ローディングメッセージ非表示
           this.loading = false
 
           this.status = response.data.status
-          if(this.status == true ) {
-
-            this.message = response.data.message
+          if(this.status = true ) {
             alert(this.message)
             // ログインページに遷移する
             this.$router.push('/login')
