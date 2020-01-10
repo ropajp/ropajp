@@ -19,8 +19,10 @@ Route::post('/register', 'RegisterController@register')->name('register');
 Route::post('/login', 'LoginController@login')->name('login');
 // 一般ユーザログアウト
 Route::post('/logout', 'LoginController@logout')->name('logout');
-// パスワードリセット
-Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.reset');
+// パスワードリセット用リンク送信
+Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+// パスワードリセット実行
+Route::post('/password/reset', 'ResetPasswordController@reset')->name('password.reset');
 });
 // 一般ユーザがログイン中かチェック
 Route::get('/user', function() {
