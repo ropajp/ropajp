@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\OwnerResetPassword;
 
 class Shop extends Authenticatable implements JWTSubject
 {
@@ -16,8 +17,10 @@ class Shop extends Authenticatable implements JWTSubject
 
     // user以外のモデルを使うため必要
     protected $guard = 'shop';
+
+    protected $table = 'shops';
     // 1ページあたりの表示件数
-    protected $perPage = 15;
+    protected $perPage = 12;
     /**
      * The attributes that are mass assignable.
      *
@@ -118,4 +121,15 @@ class Shop extends Authenticatable implements JWTSubject
    {
         return [];
     }
+
+    /**
+     * パスワード再設定メールの送信
+     * 
+     * @param string $token
+     * @return void
+     */ 
+     public function sendPasswordResetNotification($token) 
+     {
+        $this->notify(new OwnerResetPassword($token));
+     }
 }

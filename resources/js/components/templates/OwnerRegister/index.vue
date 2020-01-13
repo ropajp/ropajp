@@ -1,10 +1,14 @@
 <template>
-    <div class="container--small">
+    <div class="form--wrapper">
       <div class="form--registerwrapper">
         <h2 class="form__headmsg">新規店舗登録</h2>
         <div class="form--routeWrapper">
-              <FormMsgCmp :msg="msg" />
-              <RouteToAnotherPageCmp  :to="to" :btnName="btnName" />
+              <Paragraph class="form__msg" :msg="msg" />
+              <Route
+                  class="form__upperButton"
+                  :to="to"
+                  :btnName="btnName"
+              />
         </div>
           <OwnerRegisterCmp />
       </div>
@@ -13,14 +17,14 @@
 <script>
 
 import OwnerRegisterCmp from '../../organisms/OwnerRegisterForm/index.vue'
-import FormMsgCmp from '../../atoms/Paragraph/index.vue'
-import RouteToAnotherPageCmp from '../../atoms/Route/index.vue'
+import Paragraph from '../../atoms/Paragraph/index.vue'
+import Route from '../../atoms/Route/index.vue'
 
 export default {
   components: {
     OwnerRegisterCmp,
-      FormMsgCmp,
-      RouteToAnotherPageCmp
+    Paragraph,
+    Route
   },
   data() {
   return {

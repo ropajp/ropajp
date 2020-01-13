@@ -3,7 +3,7 @@
             <label for="login-email" class="form__label"> {{ emailLabel }}</label>
             <input
               id="login-email"
-              type="text"
+              type="email"
               class="form__item form__text"
               placeholder="登録したメールアドレス"
               v-model="value.email"

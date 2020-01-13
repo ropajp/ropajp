@@ -1,7 +1,7 @@
 <!-- 市町村 -->
 <template>
   <div>
-    <label for="city">{{ cityLabel }}</label>
+    <label for="city" class="form__label">{{ cityLabel }}</label>
     <input
         type="text"
         class="form__item form__text"

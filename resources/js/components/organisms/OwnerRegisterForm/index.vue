@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="form" @submit.prevent="register">
-      <RegisterErrorCmp />
+      <RegisterError />
         <Name v-model="form" :nameLabel="nameLabel" />
         <Email v-model="form" :emailLabel="emailLabel" />
         <Password v-model="form" :passwordLabel="passwordLabel" />
@@ -25,7 +25,7 @@
 </template>
 <script>
 
-  import RegisterErrorCmp from '../../molecules/RegisterError/index.vue'
+  import RegisterError from '../../molecules/RegisterError/index.vue'
   import Name from '../../molecules/Name/index.vue'
   import Email from '../../molecules/Email/index.vue'
   import Password from '../../molecules/Password/index.vue'
@@ -46,7 +46,7 @@
 
 export default {
   components: {
-      RegisterErrorCmp,
+      RegisterError,
       Name,
       Email,
       Password,
@@ -114,10 +114,11 @@ export default {
     async register() {
         //authストアのregisterアクションを呼び出す
         await this.$store.dispatch('auth/ownerRegister', this.form)
-
+        
         if(this.apiStatus) {
+          alert('登録が完了しました！ログインしてください。')
           //トップページに移動する
-          this.$router.push('/owners')
+          this.$router.push('/owners/owner-login')
         }
      }
   }

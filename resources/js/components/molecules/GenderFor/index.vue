@@ -1,11 +1,11 @@
 <template>
   <div>
-    <label for="gender_for">{{ genderForLabel }}</label>
+    <label for="gender_for" class="form__label">{{ genderForLabel }}</label>
     <input
         type="text"
+        placeholder="例）ユニセックス"
         class="form__item form__text"
         id="gender_for"
-        placeholder="例）ユニセックス"
         v-model="value.gender_for">
   </div>
 </template>

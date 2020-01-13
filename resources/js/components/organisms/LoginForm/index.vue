@@ -2,7 +2,7 @@
       <div>
           <form class="form" @submit.prevent="login">
           <LoginError />
-          <Email v-model="form" :emailLabel="emailLabel"/>
+          <Email v-model="form" :emailLabel="emailLabel" />
           <Password v-model="form" :passwordLabel="passwordLabel" />
           <RouterLink class="form__item" to="/forgot-passwords">
           パスワードをお忘れですか？
@@ -34,9 +34,6 @@
       }
     },
     methods: {
-      changeEmail(user_email) {
-        this.user_email = user_email
-      },
       async login() {
           // Auth.jsのログインAPIを呼び出す
           await this.$store.dispatch('auth/login', this.form)

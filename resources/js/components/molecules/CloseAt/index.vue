@@ -1,15 +1,17 @@
 <template>
   <div>
     <label class="form__label" for="open_at">{{ closeAtLabel }}</label>
-        <select v-model="hours" @change="onChange">
+    <div class="form__time-wrapper">
+        <select v-model="hours" @change="onChange" class="form__time">
             <option></option>
                 <option v-for="(text,value) in options(24)" :value="value" v-text="text"></option>
         </select>
     <span>：</span>
-        <select v-model="minutes" @change="onChange">
+        <select v-model="minutes" @change="onChange" class="form__time">
             <option></option>
                 <option v-for="(text,value) in options(60)" :value="value" v-text="text"></option>
         </select>
+     </div>
   </div>
 </template>
 <script>

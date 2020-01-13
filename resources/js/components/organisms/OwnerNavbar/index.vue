@@ -3,12 +3,10 @@
     <RouterLink class="navbar__brand" to="/owners">
       Ropa.com
     </RouterLink>
-    <RouterLink class="navbar__configLink" v-if="isLogin"   to="/owners/setting">
-    <i class="icon ion-md-add"></i>
+    <RouterLink class="navbar__configLink navbar__item" v-if="isLogin"   to="/owners/setting">
       店舗情報変更
     </RouterLink>
-    <a href="/">ショップ</a>
-    <div class="navbar__menu">
+    <div class="navbar__auth">
     <!-- ログイン状態の場合 -->
     <div v-if="isLogin" class="navbar__item">
       <span>
@@ -18,10 +16,10 @@
       </div>
       <!-- ログインしてない場合 -->
       <div v-else class="navbar__item">
-      <RouterLink class="button button--registerLink" to="/owners/owner-register">
+      <RouterLink class="button button--middle--link navbar--register" to="/owners/owner-register">
        新規店舗登録
       </RouterLink>
-      <RouterLink class="button button--loginLink" to="/owners/owner-login">
+      <RouterLink class="button button--middle--link navbar--login" to="/owners/owner-login">
         店舗ログイン
       </RouterLink>
         </div>

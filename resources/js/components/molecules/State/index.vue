@@ -1,7 +1,7 @@
 <!-- 都道府県 -->
 <template>
   <div>
-    <label for="state">{{ stateLabel }}</label>
+    <label for="state" class="form__label">{{ stateLabel }}</label>
     <input
         type="text"
         class="form__item form__text"

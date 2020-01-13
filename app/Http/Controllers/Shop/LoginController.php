@@ -14,7 +14,6 @@ use Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-
 class LoginController extends Controller
 {
     /*
@@ -69,14 +68,18 @@ class LoginController extends Controller
                 );
 
                 try {
-                    // もし入力された値がないなら
+                    // もし認証と一致しないなら
                     if(! $token = Auth::attempt($credentials)) {
                         // 422エラーをjsonで返す
-                        return response()->json(['error' => 'invalid_Credentials'], 422);
+                        return response()->json(['message' => 'The given data was invalid.',
+                                                 'errors' => [
+                                                              'email' => ['認証情報が記録と一致しません。']
+                                                ],], 422);
                     }
+
                 } catch(JWTAuthException $e) {
-                    // 例外発生時ステータス500をjsonで返す
-                    return response()->json(['error' => 'could_not_create_token'], 500);
+                    // 例外発生時ステータス401をjsonで返す
+                    return response()->json(['error' => 'could_not_create_token'], 401);
                 }
                 // 店舗情報を取得
                 $shop = Shop::with(['photos', 'favorites'])->where('email', $email)->first();
@@ -88,7 +91,7 @@ class LoginController extends Controller
             }
 // 店舗ログインチェック - セッション
         public function me(Session $session) {
-            // もし店舗がセッションにあるなら
+            // もし店舗がセッションにあるなら   
             if(Auth::guard('shop')->check()) {
                 // セッションから店舗情報を取得
                 $session = Session::get('shop');

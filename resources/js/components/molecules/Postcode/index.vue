@@ -1,11 +1,11 @@
 <template>
   <div>
-    <label for="postcode">{{ postcodeLabel }}</label>
+    <label for="postcode" class="form__label">{{ postcodeLabel }}</label>
     <input
         type="text"
         class="form__item form__text"
         id="postcode"
-        placeholder="例）123-4567"
+        placeholder="ハイフンなしで入力してください"
         v-model="value.postcode"
     >
   </div>

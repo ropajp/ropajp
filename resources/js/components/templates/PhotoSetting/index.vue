@@ -10,7 +10,7 @@
             <li v-for="msg in errors.photo" :key="msg">{{ msg }}</li>
         </ul>
       </div>
-        <input class="" type="file" @change="onFileChange">
+        <input class="photo-form__choose-photo" type="file" @change="onFileChange">
         <output v-if="preview">
         <img class="photo-form__item" :src="preview" alt="">
         </output>
@@ -183,7 +183,7 @@
     },
     async cover() {
       if(this.selectedIndexes.length != 1) {
-        alert('写真が2枚以上または選択されていません。')
+        alert('カバー写真を設定するには写真を1枚だけ選択してください')
       } else {
         let coverPhoto =''
         // 選択された写真の数だけ繰り返す

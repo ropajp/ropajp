@@ -1,7 +1,7 @@
 <!--  番地・建物名 -->
 <template>
   <div>
-    <label for="town_street">{{ townStreetLabel }}</label>
+    <label for="town_street" class="form__label">{{ townStreetLabel }}</label>
     <input
         type="text"
         class="form__item form__text"

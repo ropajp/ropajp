@@ -1,7 +1,7 @@
 <!--カテゴリー -->
 <template>
   <div>
-    <label for="category">{{ categoryLabel }}</label>
+    <label for="category" class="form__label">{{ categoryLabel }}</label>
     <input
         type="text"
         class="form__item form__text"

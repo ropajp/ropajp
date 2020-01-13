@@ -29,17 +29,21 @@ import ForgotPasswords from './components/templates/ForgotPassword/index.vue'
 // カスタマーパスワードリセット実行
 import ResetPasswords from './components/templates/ResetPassword/index.vue'
 // 店舗ページ
+// 店舗ホームページ
+import OwnerHome from './components/templates/OwnerHome/index.vue'
 // 店舗ログインページ
 import OwnerLogin from './components/templates/OwnerLogin/index.vue'
 // 店舗新規登録ページ
 import OwnerRegister from './components/templates/OwnerRegister/index.vue'
 // 店舗パスワードリセットページ
 import OwnerForgotPassword from './components/templates/OwnerForgotPassword/index.vue'
+// 店舗パスワードリセット実行用ページ
+import OwnerResetPassword from './components/templates/OwnerResetPassword/index.vue'
 // 店舗情報変更
 // セッティングリスト
 import SettingList from './components/templates/SettingList/index.vue'
 // メールアドレス、パスワード管理
-import LoginInfoSetting from './components/templates/LoginInfoSetting/index.vue'
+import WorkdaysSetting from './components/templates/WorkdaysSetting/index.vue'
 // 店舗名、電話番号管理
 import NamePhoneSetting from './components/templates/NamePhoneSetting/index.vue'
 // 店舗写真管理
@@ -127,6 +131,7 @@ const routes = [
       }
     }
   },
+  // パスワードリセット実行用API
   {
     path: '/api/password/reset',
     component: ResetPasswords,
@@ -144,6 +149,11 @@ const routes = [
         next()
       }
     }
+  },
+  // 店舗ホーム画面
+  {
+    path: '/owners',
+    component: OwnerHome
   },
   // 店舗ログイン画面
   {
@@ -196,6 +206,25 @@ const routes = [
       }
     }
   },
+  // 店舗パスワードリセット用実行API
+  {
+    path: '/api/owners/ownerPassword/reset',
+    component: OwnerResetPassword,
+    // 画面遷移する前にチェック
+    beforeEnter(to, from, next) {
+      // もしカスタマーがログインユザーなら
+      if(store.getters['auth/shopCheck']) {
+        // POPUP表示
+        alert('このページを利用するためにはログアウトする必要があります。')
+        // ホーム画面へ遷移
+        next('/owners')
+        // それ以外なら
+      } else {
+        // 次の処理へ移動
+        next()
+      }
+    }
+  },
   // 店舗設定変更リスト画面
   {
     path: '/owners/setting',
@@ -228,10 +257,10 @@ const routes = [
       }
     }
   },
-  // メールアドレス、パスワード変更画面　処理の流れは店舗設定変更リストと同じ
+  // 店舗写真変更画面　処理の流れは店舗設定変更リストと同じ
   {
-    path: '/owners/setting/login-info',
-    component: LoginInfoSetting,
+    path: '/owners/setting/photos',
+    component: PhotoSetting,
     beforeEnter(to, from, next) {
       if(!store.getters['auth/shopCheck']) {
         alert('このページを利用するには、ログインが必要です。')
@@ -241,10 +270,10 @@ const routes = [
       }
     }
   },
-  // 店舗写真変更画面　処理の流れは店舗設定変更リストと同じ
+  // 営業時間、定休日変更画面　処理の流れは店舗設定変更リストと同じ
   {
-    path: '/owners/setting/photos',
-    component: PhotoSetting,
+    path: '/owners/setting/workdays',
+    component: WorkdaysSetting,
     beforeEnter(to, from, next) {
       if(!store.getters['auth/shopCheck']) {
         alert('このページを利用するには、ログインが必要です。')

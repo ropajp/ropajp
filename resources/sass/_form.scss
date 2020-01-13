@@ -40,12 +40,23 @@
     width: 80%;
   }
 
+  &__time-wrapper {
+    margin-left: 2.8rem;
+  }
+  
+  &__time {
+    height: 2rem;
+    margin-bottom: 2rem;
+    width: 20%;
+  }
+
   &__text {
     border-radius: .25rem;
     border: 1px solid $grey-3;
   }
 
   &__label {
+    display: block;
     margin-left: 2.7rem;
   }
 
@@ -122,6 +133,7 @@
 
     &__item {
       display: block;
+      align-items: center;
       font-size: 1rem;
       height: 3rem;
       margin-left: 4rem;
@@ -158,5 +170,40 @@
       background-color: $red;
       cursor: pointer;
     }
+  }
+}
+
+// タブレット向け
+@media screen and (min-width:768px) and (max-width: 1024) {
+  .form {
+    &__time {      
+      margin-bottom: 2rem;
+      width: 20%;
+    }  
+  }
+}
+
+// PC向け
+@media screen and (min-width:1024px) {
+  .form {
+    &--wrapper {
+      margin: 5rem auto;
+      max-width: 700px;
+      padding: 1.2rem 0;
+      background-color: #FFFAFA;
+    }
+
+    &__label {
+      margin-left: 4rem;
+    }
+    &__time-wrapper {
+      margin-left: 4rem;
+    }
+    
+    &__time {
+      height: 2.5rem;
+      margin-bottom: 2rem;
+      width: 20%;
+    }  
   }
 }

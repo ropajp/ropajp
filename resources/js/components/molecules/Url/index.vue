@@ -5,7 +5,7 @@
         type="text"
         class="form__item form__text"
         id="url"
-        placeholder="例）店舗のHP、ブログのURLを入力してください"
+        placeholder="店舗のHP、ブログのURLを入力してください"
         v-model="value.url"
         >
   </div>

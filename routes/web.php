@@ -11,7 +11,7 @@
 |
 */
 // 画面更新を行った時にowners群が呼ばれるようにする
-Route::group(['prefix' => 'owners'], function(){
+Route::prefix('/owners')->group(function(){
 
     Route::get('/', function() {
         return view('ownerIndex');
@@ -33,7 +33,7 @@ Route::group(['prefix' => 'owners'], function(){
         return view('ownerIndex');
     });
 
-    Route::get('/setting/name-phone', function() {
+    Route::get('/setting/workdays', function() {
         return view('ownerIndex');
     });
 

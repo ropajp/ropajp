@@ -1,7 +1,7 @@
 <!-- 店舗紹介 -->
 <template>
   <div>
-    <label for="shop_detail">{{ shopDetailLabel }}</label>
+    <label for="shop_detail" class="form__label">{{ shopDetailLabel }}</label>
     <textarea
           type="text"
           class="form__item form__text"

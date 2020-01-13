@@ -5,7 +5,7 @@
         type="text"
         class="form__item form__text"
         id="username"
-        placeholder="例）ROPA"
+        placeholder="スペースなしで入力してください"
         v-model="value.name"
         >
   </div>

@@ -7,7 +7,9 @@
     padding: .5rem;
     right: 0;
     top: 0;
+    width: 100%;
     z-index: 3;
+    
 
     &__brand {
         color: inherit;
@@ -69,6 +71,18 @@
         color: black;
       }
    }
+
+   &__configLink {
+    color: $grey-2;
+    display: block;
+    padding-top: 1.5rem;
+    position: absolute;
+    text-decoration: none;
+      &:hover {
+        color: black;
+        border-color: black;
+      }
+    }
 }
 
 // タブレット向け
@@ -90,6 +104,7 @@
       height: 3rem;
       padding: 2%;
       position: fixed;
+      width: 100%;
 
     &__search {
        left: 2rem;
@@ -117,6 +132,9 @@
 
     &__configLink {
     color: $grey-2;
+    left: 2rem;
+    padding: 0;
+    position: relative;
     text-decoration: none;
       &:hover {
         color: black;

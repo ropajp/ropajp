@@ -13,16 +13,15 @@
         font-family: Merriweather, serif;
         font-weight: bold;
         font-size: 1.2rem;
-        margin: 0 auto;
+        margin: .5rem auto;
         text-align: center;
         text-decoration: none;
-
       }
       
       &__items {
         color: $grey-2;
         display: block;
-        line-height: 3rem;
+        line-height: 2rem;
         text-align: center;
         text-decoration: none;
       }

@@ -78,6 +78,10 @@
             alert(this.message)
             // ログインページに遷移する
             this.$router.push('/login')
+          }　
+
+          if(this.status == false) {
+            alert('メールアドレスの送信に失敗しました')
           }
       }
     }

@@ -56,7 +56,7 @@
           token: ''
         },
         loading: false,
-        message: 'パスワードが変更されました。ログインしてください。',
+        message: 'パスワードの変更が完了しました。ログインしてください。',
         status: false,
         errors: null,
         emailLabel: 'メールアドレス',
@@ -81,16 +81,16 @@
           this.loading = true
           
           // Auth.jsのログインAPIを呼び出す
-          const response = await axios.post(`/api/password/reset`, this.form)
+          const response = await axios.post(`/api/owners/ownerPassword/reset`, this.form)
         
           // ローディングメッセージ非表示
           this.loading = false
 
-          this.status = response.data.status
+          this.status = response.data.value 
           if(this.status == true) {
             alert(this.message)
             // ログインページに遷移する
-            this.$router.push('/login')
+            this.$router.push('/owners/owner-login')
           }
       }
     }

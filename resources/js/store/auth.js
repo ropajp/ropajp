@@ -56,7 +56,7 @@ const actions = {
     // 非同期処理に成功した場合
     if(response.status === CREATED) {
       context.commit('setApiStatus', true)
-      context.commit('setShop', response.data)
+      // context.commit('setShop', response.data)
       return false
     }
 
