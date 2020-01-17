@@ -7,7 +7,7 @@
             <div class="owner-home__contents">
                 <div class="owner-home__content-small">
                     <h1 class="owner-home__sub_title">Ropa.jpとは？</h1>
-                    <p class="owner-home__text">ロパは検索機能によってアパレルショップを探せるWebサイトです</p>
+                    <p class="owner-home__text">ロパは検索機能によってアパレルショップを探せるWebサイトです。</p>
                 </div>
                 <div class="owner-home__content-small">
                         <h1 class="owner-home__sub_title">ロパなら掲載料無料</h1>
@@ -36,7 +36,7 @@
                     <div class="owner-home__content-small">
                         <h1 class="owner-home__sub_title">様々なキーワードからお店を検索できます</h1>
                             <p class="owner-home__text owner-home__float-right">
-                                検索エンジンでは検索上位に表示されず、頭を悩ませているならロパはいい選択肢になるでしょう。
+                                検索エンジンで検索上位に表示されず、頭を悩ませているならロパはいい選択肢になるでしょう。
                                 <br>なぜならロパはアパレルショップのみを扱っておりアパレルショップを探している人のみが集まるからです。
                             </p>
                     <img class="owner-home__image2" src="/img/owner-image2.jpg" alt="">

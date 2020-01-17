@@ -90,7 +90,7 @@ export default {
           gender_for: '',
           shop_detail: ''
       },
-      msg: '*がついてる箇所は入力必須項目です。',
+      msg: '*がついてる箇所は入力必須項目です。メールアドレス以外は後から変更可能です。',
       nameLabel: '* 店舗名',
       emailLabel: '*店舗メールアドレス',
       passwordLabel: '* 店舗パスワード',
