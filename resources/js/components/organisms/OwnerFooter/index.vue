@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__wrapper">
         <RouterLink class="footer__brand" to="/owners">
-          Ropa.com
+          Ropa.jp
         </RouterLink>
         <a class="footer__items" href="/">ショップを探す</a>
         <RouterLink class="footer__items" to="/terms-of-service">

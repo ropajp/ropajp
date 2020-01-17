@@ -2,6 +2,7 @@
   <div>
     <form class="form" @submit.prevent="register">
       <RegisterError />
+        <Paragraph :msg="msg" class="form__label"/>
         <Name v-model="form" :nameLabel="nameLabel" />
         <Email v-model="form" :emailLabel="emailLabel" />
         <Password v-model="form" :passwordLabel="passwordLabel" />
@@ -25,7 +26,9 @@
 </template>
 <script>
 
+  
   import RegisterError from '../../molecules/RegisterError/index.vue'
+  import Paragraph from '../../atoms/Paragraph/index.vue'
   import Name from '../../molecules/Name/index.vue'
   import Email from '../../molecules/Email/index.vue'
   import Password from '../../molecules/Password/index.vue'
@@ -47,6 +50,7 @@
 export default {
   components: {
       RegisterError,
+      Paragraph,
       Name,
       Email,
       Password,
@@ -86,10 +90,11 @@ export default {
           gender_for: '',
           shop_detail: ''
       },
-      nameLabel: '店舗名',
-      emailLabel: '店舗メールアドレス',
-      passwordLabel: '店舗パスワード',
-      passwordConfirmationLabel: '確認用パスワード',
+      msg: '*がついてる箇所は入力必須項目です。',
+      nameLabel: '* 店舗名',
+      emailLabel: '*店舗メールアドレス',
+      passwordLabel: '* 店舗パスワード',
+      passwordConfirmationLabel: '* 確認用パスワード',
       phoneNumberLabel: '店舗電話番号',
       urlLabel: '店舗URL',
       postcodeLabel: '郵便番号',

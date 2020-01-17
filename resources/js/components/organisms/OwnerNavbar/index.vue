@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <RouterLink class="navbar__brand" to="/owners">
-      Ropa.com
+      Ropa.jp
     </RouterLink>
     <RouterLink class="navbar__configLink navbar__item" v-if="isLogin"   to="/owners/setting">
       店舗情報変更

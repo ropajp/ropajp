@@ -3,7 +3,7 @@
   position: relative;
     &__photo {
         background-color: rgba(0,0,0,0.4);
-        background-image: url(/img/6C565A8F-70DB-4776-BF02-3AA5101A184D.JPG);
+        background-image: url(/img/customer-main.jpeg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -12,7 +12,7 @@
   }
 
   &__msg {
-    color: white;
+    color:#f8f8ff;
     font-size: 2.7rem;
     line-height: 3rem;
     height: 3rem;
@@ -54,18 +54,17 @@
   .home {
     margin-top: 3.7rem;
     &__photo {
-        background-image: url(/img/6C565A8F-70DB-4776-BF02-3AA5101A184D.JPG);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 80vh;
-        opacity: 0.8;
+        height: 90vh;
+        opacity: 0.9;
   }
   
   &__msg {
-    color: white;
+    color: #f8f8ff;
     font-size: 3rem;
-    padding-top: 10rem;
+    padding-top: 8rem;
     margin: 0;
     text-align: center;
   }

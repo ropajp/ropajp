@@ -1,12 +1,250 @@
+// スマホ向け
 .owner-home {
-    min-height:120vh;
-} 
-  
-@media screen and (max-width:768px) and ( max-width:1024px) {
-      /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    margin-top: -1.5rem;
+    &__wrapper {
+        min-height:120vh;   
+        padding-bottom: 2rem;
+    }
+
+    &__photo {
+        background-color: rgba(0,0,0,0.4);
+        background-image: url(/img/owner-home.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25rem;
+  } 
+
+    &__headMsg {
+        line-height: 40px;
+        color:#f5f5f5;
+        text-align: center;
+        position: relative;
+        top: 10rem;
+    }
+
+    &__contents {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    &__content-small {
+        display: inline-block;
+        margin: 2rem 0;
+    }
+
+    &__sub_title {
+        line-height: 3.4rem;
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }        
+
+    &__text {
+        color: $grey-1;
+    }
+
+    &__image1 {
+        border-radius: 2px;
+        height: 400px;
+        width: 360px;
+    }
+
+    &__image2 {
+        float: left;
+        border-radius: 2px;
+        height: 400px;
+        width: 360px;
+    }
+
+}   
+
+// タブレット向け
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    .owner-home {
+        margin-top: -2rem;
+
+
+        &__wrapper {
+            min-height: 140vh;
+            padding-bottom: 4rem;
+        }
+        
+        &__photo {
+            background-color: rgba(0,0,0,0.4);
+            background-image: url(/img/owner-home.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30rem;
+            opacity: 0.9;
+      }    
+
+      &__headMsg {
+        color: #f8f8ff;
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+        top: 7rem;
+    }
+
+        &__contents {
+            margin: 0 auto;
+            text-align: center;
+            width: 85%;
+        }
+
+        &__content-small {
+            display: inline-block;
+            margin: 2rem 0;
+            width: 80%;
+        }
+
+        &__sub_title {
+            content:"";
+            display:table;
+            clear:both;
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }        
+
+        &__text {
+            text-align: center;
+            line-height: 30px;
+            
+        }
+        
+        &__float-left {
+            padding-top: 200px;
+            margin-right: 0;
+        }
+
+        &__float-right {
+            padding-top: 200px;
+            margin-right: 0;
+        }
+
+        &__image1 {
+            margin-left: 0;
+            height: 500px;
+            width: 400px;
+        }  
+
+        &__image2 {
+            margin-left: 0;
+            height: 500px;
+            width: 400px;
+        }
+
+        &__box {
+            padding: 10px;
+            text-align: center;
+            margin: 4rem auto;
+        }
+
+        &__steps {
+            width: 25%;
+            margin:0 40px; 
+            display: inline-block;
+        }
+        
+    }
+
 }
-  
-@media screen and (max-width:480px) {
-          /*　画面サイズが480pxからはここを読み込む　*/
+
+// PC向け
+@media screen and (min-width:1024px) {
+    .owner-home {
+        margin-top: 3.7rem;    
+    
+        &__wrapper {
+            min-height: 140vh;
+            padding-bottom: 4rem;
+        }
+        
+        &__photo {
+            background-color: rgba(0,0,0,0.4);
+            height: 30rem;
+            opacity: 0.9;
+      }    
+
+      &__headMsg {
+        color: #f8f8ff;
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+        top: 7rem;
+    }
+
+        &__contents {
+            margin: 0 auto;
+            text-align: center;
+            width: 85%;
+        }
+
+        &__content-small {
+            display: inline-block;
+            margin: 2rem 0;
+            width: 80%;
+        }
+
+        &__sub_title {
+            content:"";
+            display:table;
+            clear:both;
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }        
+
+        &__text {
+            text-align: center;
+            line-height: 30px;
+            
+        }
+        
+        &__float-left {
+            padding-top: 200px;
+            float:left;
+            width: 50%;
+            margin-right: 0;
+        }
+
+        &__float-right {
+            padding-top: 200px;
+            float:right;
+            width: 50%;
+            margin-right: 0;
+        }
+
+        &__image1 {
+            float: right;
+            margin-left: 0;
+            height: 500px;
+            width: 400px;
+        }  
+
+        &__image2 {
+            float: left;
+            margin-left: 0;
+            height: 500px;
+            width: 400px;
+        }
+
+        &__box {
+            padding: 10px;
+            text-align: center;
+            margin: 4rem auto;
+        }
+
+        &__steps {
+            width: 25%;
+            margin:0 40px; 
+            display: inline-block;
+        }
+        
+    }
 }
-  
