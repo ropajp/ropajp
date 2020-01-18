@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/api/owners/ownerPassword/reset', function() {
+    return view('ownerIndex');
+});
+
 // 画面更新を行った時にowners群が呼ばれるようにする
 Route::prefix('/owners')->group(function(){
 
