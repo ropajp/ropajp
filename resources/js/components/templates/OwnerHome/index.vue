@@ -42,7 +42,7 @@
                     <img class="owner-home__image2" src="/img/owner-image2.jpg" alt="">
                 </div>
                     <h1 class="owner-home__sub_title">今すぐ始めよう</h1>
-                    <p class="owner-home__text">会員登録はこちらから</p>
+                    <p class="owner-home__text">店舗登録はこちらから</p>
                     <RouterLink class="button button--middle--link navbar--register" to="/owners/owner-register">
                         新規店舗登録
                        </RouterLink>

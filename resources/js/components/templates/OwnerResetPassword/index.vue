@@ -4,9 +4,9 @@
           <div v-show="loading" class="panel">
             <Loader>送信中...</Loader>
           </div>
-          <div v-if="status" class="panel">
+          <!-- <div v-if="status" class="panel">
             {{ message }}
-          </div>
+          </div> -->
           <form class="form" @submit.prevent="reset" v-show="! loading">
           　<LoginError />
           　<Paragraph class="form__headmsg" :msg="passwordChangeMsg" /><br>
@@ -86,8 +86,9 @@
           // ローディングメッセージ非表示
           this.loading = false
 
-          this.status = response.data.value 
-          if(this.status == true) {
+          this.status = response.data
+          console.log(this.status)
+          if(this.status == 'passwords.token') {
             alert(this.message)
             // ログインページに遷移する
             this.$router.push('/owners/owner-login')
