@@ -4,11 +4,8 @@
           <div v-show="loading" class="panel">
             <Loader>送信中...</Loader>
           </div>
-          <!-- <div v-if="status" class="panel">
-            {{ message }}
-          </div> -->
           <form class="form" @submit.prevent="reset" v-show="! loading">
-          　<LoginError />
+          <RegisterError />
           　<Paragraph class="form__headmsg" :msg="passwordChangeMsg" /><br>
             <Email
                  v-model="form" 
@@ -32,7 +29,7 @@
   import Loader from '../../atoms/Loader/index.vue'
   import Paragraph from '../../atoms/Paragraph/index.vue'
   import Route from '../../atoms/Route/index.vue'
-  import LoginError from '../../molecules/LoginError/index.vue'
+  import RegisterError from '../../molecules/RegisterError/index.vue'
   import Email from '../../molecules/Email/index.vue'
   import Password from '../../molecules/Password/index.vue'
   import PasswordConfirmation from '../../molecules/PasswordConfirmation/index.vue'
@@ -40,7 +37,7 @@
   export default {
     components: {
       Loader,
-      LoginError,
+      RegisterError,
       Paragraph,
       Route,
       Email,
@@ -56,7 +53,7 @@
           token: ''
         },
         loading: false,
-        message: 'パスワードの変更が完了しました。ログインしてください。',
+        success_message: 'パスワードを変更しました。ログインしてください。',
         status: false,
         errors: null,
         emailLabel: 'メールアドレス',
@@ -88,11 +85,11 @@
 
           this.status = response.data
           console.log(this.status)
-          if(this.status == 'passwords.token') {
-            alert(this.message)
+          if(this.status == true) {
+            alert(this.success_message)
             // ログインページに遷移する
             this.$router.push('/owners/owner-login')
-          }
+          } 
       }
     }
   }
