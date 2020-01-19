@@ -328,7 +328,6 @@ const routes = [
   }
   ]
 
-
   const router = new VueRouter({
     mode: 'history',
     // ページ移動したときにページの一番上に移動する。
@@ -338,5 +337,12 @@ const routes = [
     routes,
   })
 
+  router.afterEach((to, from) => {
+    gtag('config', 'UA-156424730-1', {'page_path': to.path})
+  })
+  
+
 //app.jsでインポートする
 export default router
+
+
