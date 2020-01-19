@@ -57,6 +57,10 @@ Route::prefix('/owners')->group(function(){
     Route::get('/setting/address', function() {
         return view('ownerIndex');
     });
+
+    Route::get('/shops/{id}', function() {
+        return view('ownerIndex');
+    });
 });
 
 Route::get('/{any?}', function() {

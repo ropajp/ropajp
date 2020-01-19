@@ -63,42 +63,42 @@
           <div class="shop-detail__content">
               <h5 class="shop-detail__sub-title">
                   <i class="fas fa-tshirt"></i>　
-                  取り扱いブランド
+                  <span class="mini-title">取り扱いブランド</span>
               </h5>
                   <div v-if="shop.brands == null " class="shop-detail__sub-content">
-                    　　情報がありません
+                    <span class="mini-title">情報がありません</span>
                   </div>
                   <div v-else class="shop-detail__sub-content">
-                    　　{{ shop.brands }}
+                    <span class="mini-contents">{{ shop.brands }}</span>
                   </div>
               <h5 class="shop-detail__sub-title">
                   <i class="fas fa-map-marker-alt"></i>　
-                  住所
+                  <span class="mini-title">住所</span>
               </h5>
                   <div v-if="shop.state == null || shop.city == null || shop.town_street ==null" class="shop-detail__sub-content">
-                    　　情報がありません
+                    <span class="mini-title">情報がありません</span>
                   </div>
                   <div v-else class="shop-detail__sub-content">
-                    　            {{shop.state}}{{shop.city}}{{shop.town_street}}
+                    <span class="mini-contents">{{shop.state}}{{shop.city}}{{shop.town_street}}</span>
                   </div>
               <h5 class="shop-detail__sub-title">
-                  <i class="fas fa-link"></i> 　URL
+                  <i class="fas fa-link"></i>URLURL
               </h5>
                   <div v-if="shop.url == null " class="shop-detail__sub-content">
-                    　　情報がありません
+                    <span class="mini-title">情報がありません</span>
                   </div>
                   <div  v-else class="shop-detail__sub-content"> 　
-                      {{ shop.url }}
+                      <span class="mini-contents">{{ shop.url }}</span>
                   </div>
               <h5 class="shop-detail__sub-title">
-                  <i class="fas fa-store"></i>　
-                  店舗紹介
+                  <i class="fas fa-store"></i>
+                  <span class="mini-title">店舗紹介</span>
               </h5>
                   <div v-if="shop.shop_detail == null " class="shop-detail__sub-content">
-                    　　情報がありません
+                    <span class="mini-title">情報がありません</span>
                   </div>
                   <div v-else class="shop-detail__sub-content">
-                    　　{{shop.shop_detail}}
+                    <span class="mini-contents">{{shop.shop_detail}}</span>
                   </div>
           </div>
 
@@ -124,6 +124,7 @@
                 <button type="submit" class="button button--inverse button--middle">投稿する</button>
               </div>
           </form>
+          <span v-else>※コメントするにはログインしてください。</span>
         <ul v-if="shop.comments.length > 0" class="shop-detail__comments">
             <li
               v-for="comment in shop.comments"

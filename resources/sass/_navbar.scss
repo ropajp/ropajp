@@ -66,16 +66,13 @@
     color: $grey-1;
     margin: 0 .1rem;
 
-      &:hover {
-        border-color: black;
-        color: black;
-      }
+      
    }
 
    &__configLink {
     color: $grey-2;
     display: block;
-    padding-top: 1.5rem;
+    top: 3rem;
     position: absolute;
     text-decoration: none;
       &:hover {
@@ -83,6 +80,15 @@
         border-color: black;
       }
     }
+    &__page-check {
+      color: $grey-2;
+      display: block;
+      top: 5rem;
+      position: absolute;
+      text-decoration: none;
+      
+    }
+  
 }
 
 // タブレット向け
@@ -133,9 +139,21 @@
     &__configLink {
     color: $grey-2;
     left: 2rem;
-    padding: 0;
+    top: 0;
     position: relative;
     text-decoration: none;
+    &:hover {
+      border-color: black;
+      color: black;
+    }
+    }
+
+    &__page-check {
+      color: $grey-2;
+      display: inline;
+      top:0;
+      left: 4rem;
+      position: relative;
       &:hover {
         color: black;
         border-color: black;

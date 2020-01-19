@@ -296,6 +296,13 @@ const routes = [
       }
     }
   },
+  // 店舗表示状況確認画面 id: 店舗ID
+  {
+    path: '/owners/shops/:id',
+    component: ShopDetail,
+    // :idをpropsとして受け取る
+    props: true
+  },
   // 店舗住所変更画面　処理の流れは店舗設定変更リストと同じ
   {
     path: '/owners/setting/address',

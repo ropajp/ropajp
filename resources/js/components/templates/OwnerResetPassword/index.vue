@@ -84,7 +84,6 @@
           this.loading = false
 
           this.status = response.data
-          console.log(this.status)
           if(this.status == true) {
             alert(this.success_message)
             // ログインページに遷移する
