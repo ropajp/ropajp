@@ -82,7 +82,7 @@
                     <span class="mini-contents">{{shop.state}}{{shop.city}}{{shop.town_street}}</span>
                   </div>
               <h5 class="shop-detail__sub-title">
-                  <i class="fas fa-link"></i>URLURL
+                  <i class="fas fa-link"></i>URL
               </h5>
                   <div v-if="shop.url == null " class="shop-detail__sub-content">
                     <span class="mini-title">情報がありません</span>

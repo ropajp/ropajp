@@ -33,7 +33,7 @@
 }
 
 // タブレット向け
-@media screen and (min-width:768px) and (max-width: 1024) {
+@media screen and (min-width:768px) and (max-width: 959px) {
   .button {
     &--middle {
       font-size: 1rem;
@@ -41,27 +41,39 @@
     }
 
   &--middle--link {
-    font-size: 1rem;
+    // font-size: 1rem;
     border-radius: .25rem;
-    padding: 1rem 1rem;
+    padding: .7rem .7rem;
     margin: 0 .15rem;
   }
  }
 }
 
-// PC向け
-@media screen and (min-width:1024px) {
+@media screen and (min-width:960px) and (max-width:1279px) {
   .button {
     &--middle {
-      font-size: 1rem;
       padding: .5rem .75rem;
     }
 
     &--middle--link {
       border-radius: .25rem;
-      font-size: 1rem;
       margin: 0 .15rem;
-      padding: 1rem 1rem;
+      padding: .7rem .7rem;
+    }
+  }  
+}
+
+// PC向け
+@media screen and (min-width:1280px) {
+  .button {
+    &--middle {
+      padding: .5rem .75rem;
+    }
+
+    &--middle--link {
+      border-radius: .25rem;
+      margin: 0 .15rem;
+      padding: .7rem .7rem;
     }
   }
 }

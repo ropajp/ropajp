@@ -34,6 +34,7 @@
     }
 
     &__sub_title {
+        color: $grey-1;
         line-height: 3.4rem;
         font-size: 2rem;
         padding-bottom: 1rem;
@@ -41,6 +42,7 @@
 
     &__text {
         color: $grey-1;
+        line-height: 2rem;
     }
 
     &__image1 {
@@ -56,106 +58,38 @@
         width: 360px;
     }
 
+    &__steps {
+        color: $grey-1;
+    }
+
+    &__sample-shop-page {
+        color: $grey-2;
+        display: block;
+        text-decoration: none;
+        margin-top: 2rem;
+    }
+
+    &__check {
+        color: $teal;
+        font-size: large;
+    }
 }   
 
 // タブレット向け
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 959px) {
     /*　画面サイズが768pxから1024pxまではここを読み込む　*/
     .owner-home {
         margin-top: -2rem;
-
-
-        &__wrapper {
-            min-height: 140vh;
-            padding-bottom: 4rem;
-        }
-        
-        &__photo {
-            background-color: rgba(0,0,0,0.4);
-            background-image: url(/img/owner-home.jpg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 30rem;
-            opacity: 0.9;
-      }    
-
-      &__headMsg {
-        color: #f8f8ff;
-        font-size: 3rem;
-        text-align: center;
-        position: relative;
-        top: 7rem;
-    }
-
-        &__contents {
-            margin: 0 auto;
-            text-align: center;
-            width: 85%;
-        }
-
-        &__content-small {
-            display: inline-block;
-            margin: 2rem 0;
-            width: 80%;
-        }
-
-        &__sub_title {
-            content:"";
-            display:table;
-            clear:both;
-            display: block;
-            text-align: center;
-            font-size: 3rem;
-            padding-bottom: 1rem;
-        }        
-
-        &__text {
-            text-align: center;
-            line-height: 30px;
-            
-        }
-        
-        &__float-left {
-            padding-top: 200px;
-            margin-right: 0;
-        }
-
-        &__float-right {
-            padding-top: 200px;
-            margin-right: 0;
-        }
-
-        &__image1 {
-            margin-left: 0;
-            height: 500px;
-            width: 400px;
-        }  
-
-        &__image2 {
-            margin-left: 0;
-            height: 500px;
-            width: 400px;
-        }
-
-        &__box {
-            padding: 10px;
-            text-align: center;
-            margin: 4rem auto;
-        }
-
-        &__steps {
-            width: 25%;
-            margin:0 40px; 
-            display: inline-block;
-        }
-        
     }
 
 }
 
+@media screen and (min-width:960px) and (max-width:1279px) {
+    
+}
+
 // PC向け
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1280px) {
     .owner-home {
         margin-top: 3.7rem;    
     
@@ -181,13 +115,13 @@
         &__contents {
             margin: 0 auto;
             text-align: center;
-            width: 85%;
+            width: 90%;
         }
 
         &__content-small {
             display: inline-block;
             margin: 2rem 0;
-            width: 80%;
+            width: 70%;
         }
 
         &__sub_title {
@@ -202,42 +136,45 @@
 
         &__text {
             text-align: center;
-            line-height: 30px;
-            
+            line-height: 2rem;
         }
         
         &__float-left {
-            padding-top: 200px;
+            padding-top: 85px;
             float:left;
             width: 50%;
             margin-right: 0;
         }
 
         &__float-right {
-            padding-top: 200px;
+            padding-top: 80px;
             float:right;
             width: 50%;
-            margin-right: 0;
         }
 
         &__image1 {
             float: right;
-            margin-left: 0;
-            height: 500px;
-            width: 400px;
+            height: 25rem;
+            width: 20rem;
         }  
 
         &__image2 {
             float: left;
             margin-left: 0;
-            height: 500px;
-            width: 400px;
+            height: 25rem;
+            width: 20rem;
         }
 
         &__box {
             padding: 10px;
             text-align: center;
             margin: 4rem auto;
+        }
+
+        &__sample-shop-page {
+         &:hover {
+             color: black;
+         }
         }
 
         &__steps {

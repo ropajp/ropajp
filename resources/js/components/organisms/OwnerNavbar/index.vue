@@ -3,6 +3,7 @@
     <RouterLink class="navbar__brand" to="/owners">
       Ropa.jp
     </RouterLink>
+    <!-- ログイン状態の場合 -->
     <RouterLink class="navbar__configLink navbar__item" v-if="isLogin"   to="/owners/setting">
       店舗情報変更
     </RouterLink>
@@ -10,7 +11,6 @@
       表示チェックはこちら
     </RouterLink>
     <div class="navbar__auth">
-    <!-- ログイン状態の場合 -->
     <div v-if="isLogin" class="navbar__item">
       <span>
          <i class="fas fa-store"></i> {{ shopname }}

@@ -64,9 +64,7 @@
   &--login {
     border: 1px solid $grey-2;
     color: $grey-1;
-    margin: 0 .1rem;
-
-      
+    margin: 0 .1rem;  
    }
 
    &__configLink {
@@ -80,6 +78,7 @@
         border-color: black;
       }
     }
+
     &__page-check {
       color: $grey-2;
       display: block;
@@ -92,22 +91,93 @@
 }
 
 // タブレット向け
-@media screen and (min-width:768px) and (max-width: 1024) {
+@media screen and (min-width:768px) and (max-width: 959px) {
     /*　画面サイズが768pxから1024pxまではここを読み込む　*/
     .navbar {
-     &__auth {
-       position: absolute;
-     }
+      background: #fff;
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+      height: 8rem;
+      left: 0;
+      padding: .5rem;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+  
+      &__auth {
+        position: relative;
+        float: right;
+      }
    }
 }
 
+@media screen and (min-width:960px) and (max-width:1279px) {
+  .navbar {
+    align-items: center;
+    display: flex;
+    height: 4rem;
+    padding: 2%;
+    position: fixed;
+    width: 100%;
+
+  &__search {
+     left: 2rem;
+     padding: 1rem;
+     position: relative;
+     top: 0;
+    width: 50%;
+   }
+
+   .search {
+     &__searchBar {
+       height: 3rem;
+       width:  50%;
+     }
+     &__magnify {
+       height: 3rem;
+       width: 2.6rem;
+     }
+   }
+
+  &__auth {
+    position: absolute;
+    right: 2rem;
+  }
+
+  &__configLink {
+  color: $grey-2;
+  left: 2rem;
+  top: 0;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    border-color: black;
+    color: black;
+  }
+  }
+
+  &__page-check {
+    color: $grey-2;
+    display: inline;
+    top:0;
+    left: 4rem;
+    position: relative;
+    &:hover {
+      color: black;
+      border-color: black;
+    }
+  }
+}
+
+}
+
 // PC向け
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1280px) {
     /*　画面サイズが1024pxからはここを読み込む　*/
   .navbar {
       align-items: center;
       display: flex;
-      height: 3rem;
+      height: 4rem;
       padding: 2%;
       position: fixed;
       width: 100%;
