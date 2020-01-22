@@ -21,7 +21,7 @@
                     <div class="owner-home__box">
                         <h1 class="owner-home__sub_title">ロパの３つの特徴</h1>
                             <div class="owner-home__steps">
-                                <h2><i class="far fa-check-circle owner-home__check"></i> 写真を何枚も表示</h2>
+                                <h2><i class="far fa-check-circle owner-home__check"></i> 写真を何枚も表示可能</h2>
                                 <p class="owner-home__text">写真は大きく何枚も表示できるので、あなたのお店の強みを細かいところまでお店を探す人に対して直感的に伝えることができます。</p>
                             </div>
                             <div class="owner-home__steps">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <h1 class="owner-home__sub_title">今すぐ始めよう</h1>
-                    <p class="owner-home__text">店舗登録はこちらから</p>
+                    <p class="owner-home__text">店舗登録はこちらから(無料)</p>
                     <RouterLink class="button button--middle--link navbar--register" to="/owners/owner-register">
                         新規店舗登録
                     </RouterLink>
