@@ -7,7 +7,7 @@
         <Email v-model="form" :emailLabel="emailLabel" />
         <Password v-model="form" :passwordLabel="passwordLabel" />
         <PasswordConfirmation v-model="form" :passwordConfirmationLabel="passwordConfirmationLabel" />
-        <PhoneNumber v-model="form" :phoneNumberLabel="phoneNumberLabel" />
+        <!-- <PhoneNumber v-model="form" :phoneNumberLabel="phoneNumberLabel" />
         <Url v-model="form" :urlLabel="urlLabel" />
         <Postcode v-model="form" :postcodeLabel="postcodeLabel" />
         <State v-model="form" :stateLabel="stateLabel" />
@@ -19,7 +19,7 @@
         <OpenAt v-model="form" :openAtLabel="openAtLabel" />
         <CloseAt v-model="form" :closeAtLabel="closeAtLabel" />
         <DayOff v-model="form" :dayOffLabel="dayOffLabel" />
-        <ShopDetail v-model="form" :shopDetailLabel="shopDetailLabel" />
+        <ShopDetail v-model="form" :shopDetailLabel="shopDetailLabel" /> -->
         <button type="submit" class="form__item form__button">新規会員登録</button>
     </form>
   </div>

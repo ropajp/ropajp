@@ -1,3 +1,3 @@
 <template>
-  <p>お探しのページは見つかりませんでした</p>
+  <p class="not-found">お探しのページは見つかりませんでした</p>
 </template>
