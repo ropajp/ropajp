@@ -90,7 +90,7 @@ export default {
           gender_for: '',
           shop_detail: ''
       },
-      msg: '*がついてる箇所は入力必須項目です。メールアドレス以外は後から変更可能です。',
+      msg: '*がついてる箇所は入力必須項目です。',
       nameLabel: '* 店舗名',
       emailLabel: '*店舗メールアドレス',
       passwordLabel: '* 店舗パスワード',
@@ -121,7 +121,7 @@ export default {
         await this.$store.dispatch('auth/ownerRegister', this.form)
         
         if(this.apiStatus) {
-          alert('登録が完了しました！ログインしてください。')
+          alert('登録が完了しました！ログインして情報変更画面から情報を追加してください。')
           //トップページに移動する
           this.$router.push('/owners/owner-login')
         }

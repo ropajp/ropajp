@@ -45,7 +45,7 @@
         return false
       }
       this.$store.commit('message/setContent', {
-        content: '住所情報が更新されました！',
+        content: '名前・電話番号情報が更新されました！',
         timeout: 3000
       })
 
