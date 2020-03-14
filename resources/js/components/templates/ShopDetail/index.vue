@@ -88,7 +88,7 @@
                     <span class="mini-title">情報がありません</span>
                   </div>
                   <div  v-else class="shop-detail__sub-content"> 　
-                      <a v-bind:href="shop.url" class="mini-contents">{{ shop.url }}</a>
+                      <span class="mini-contents">{{ shop.url }}</span>
                   </div>
               <h5 class="shop-detail__sub-title">
                   <i class="fas fa-store"></i>

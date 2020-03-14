@@ -11656,14 +11656,9 @@ var render = function() {
                   ])
                 ])
               : _c("div", { staticClass: "shop-detail__sub-content" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "mini-contents",
-                      attrs: { href: _vm.shop.url }
-                    },
-                    [_vm._v(_vm._s(_vm.shop.url))]
-                  )
+                  _c("span", { staticClass: "mini-contents" }, [
+                    _vm._v(_vm._s(_vm.shop.url))
+                  ])
                 ]),
             _vm._v(" "),
             _vm._m(3),
