@@ -4,6 +4,7 @@ namespace App\Models;
 use App\Models\Shop;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Arr;
 
 class Photo extends Model
 {
@@ -33,7 +34,7 @@ class Photo extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        if (! array_get($this->attributes, 'id')) {
+        if (! Arr::get($this->attributes, 'id')) {
             $this->setId();
         }
     }

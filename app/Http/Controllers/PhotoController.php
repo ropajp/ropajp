@@ -17,7 +17,7 @@ class PhotoController extends Controller
     }
 
     public function select(Request $request) {
-        $shops = Shop::with('photos')->where('id', $request->id)->first();
+        $shops = Shop::with('photos')->where('id', $request->id)->first() ?? '';
         return $shops;
     }
 
