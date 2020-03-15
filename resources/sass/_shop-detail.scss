@@ -38,6 +38,14 @@
     font-size: .95rem;
   }
 
+  &__url {
+    text-decoration: none; 
+    color: $teal;
+    &:hover {
+      text-decoration: underline
+    }
+  }
+
   &__content {
     font-size: 15px;
   }

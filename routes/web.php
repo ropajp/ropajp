@@ -58,6 +58,10 @@ Route::prefix('/owners')->group(function(){
         return view('ownerIndex');
     });
 
+    Route::get('/setting/url', function() {
+        return view('ownerIndex');
+    });
+
     Route::get('/shops/{id}', function() {
         return view('ownerIndex');
     });

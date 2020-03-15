@@ -13,6 +13,9 @@
   <RouterLink class="setting__item" to="/owners/setting/detail">
      カテゴリー・取り扱いブランド変更
   </RouterLink>
+  <RouterLink class="setting__item" to="/owners/setting/url">
+    URL変更
+  </RouterLink>
   <RouterLink class="setting__item" to="/owners/setting/workdays">
     営業時間・定休日変更
   </RouterLink>

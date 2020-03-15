@@ -52,6 +52,8 @@ import PhotoSetting from './components/templates/PhotoSetting/index.vue'
 import DetailSetting from './components/templates/DetailSetting/index.vue'
 // 店舗住所変更
 import AddressSetting from './components/templates/AddressSetting/index.vue'
+// 店舗URL変更
+import UrlSetting from './components/templates/UrlSetting/index.vue'
 
 // vueRouterを使用することを宣言
 Vue.use(VueRouter)
@@ -274,6 +276,19 @@ const routes = [
   {
     path: '/owners/setting/workdays',
     component: WorkdaysSetting,
+    beforeEnter(to, from, next) {
+      if(!store.getters['auth/shopCheck']) {
+        alert('このページを利用するには、ログインが必要です。')
+        next('/owners/owner-login')
+      } else {
+        next()
+      }
+    }
+  },
+  // 店舗URL変更画面　処理の流れは店舗設定変更リストと同じ
+  {
+    path: '/owners/setting/url',
+    component: UrlSetting,
     beforeEnter(to, from, next) {
       if(!store.getters['auth/shopCheck']) {
         alert('このページを利用するには、ログインが必要です。')

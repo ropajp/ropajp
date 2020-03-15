@@ -83,8 +83,11 @@ Route::namespace('Shop\Setting')->prefix('/owners/setting')->name('shop.setting.
     Route::get('workdays/select/{id}', 'WorkdaysController@index')->name('workdays.select');
     // 営業情報更新
     Route::post('workdays/update', 'WorkdaysController@update')->name('workdays.update');
+    // URL取得表示
+    Route::get('url/select/{id}', 'UrlController@index')->name('url.select');
+    // URL更新
+    Route::post('/url/update', 'UrlController@update')->name('url.update');
 });
-
 
 
 // ***************************************************************************************************

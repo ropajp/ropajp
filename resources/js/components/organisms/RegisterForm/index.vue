@@ -20,7 +20,7 @@
                 />
                 <p class="form__terms-of-service">
                   「新規会員登録」のボタンを押すことにより、
-                    <RouterLink to="/terms-of-service">
+                    <RouterLink to="/terms-of-service" target="_blank">
                       利用規約
                     </RouterLink>
                     に同意したものとみなします。
