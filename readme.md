@@ -1,4 +1,4 @@
-Ropa.js
+Ropa.js(h1)
  
 ## 概要
 　アパレルショップとアパレルショップを探す人を繋げるプラットフォームサービスです。ビジネスモデル的にはO2O(Online to Offline)を
@@ -7,24 +7,24 @@ Ropa.js
 
 
 ##　使用技術
- フロントエンド - Vue.js(JavaScript) 
- バックエンド　 - Laravel(PHP) 
- DB           - MySQL 
- AWS          - S3 
- サーバ        - heroku 
+ フロントエンド - Vue.js(JavaScript)
+ バックエンド　 - Laravel(PHP)
+ DB           - MySQL
+ AWS          - S3
+ サーバ        - heroku
  
  -ディレクトリ構成- 
- JSファイル　　　/ropa/resources/js/ 
- CSSファイル　　 /ropa/resources/sass/ 
- コントローラー　/ropa/app/Http/Controllers/ 
+ JSファイル　　　/ropa/resources/js/
+ CSSファイル　　 /ropa/resources/sass/
+ コントローラー　/ropa/app/Http/Controllers/
 
 ## 機能 
-- 認証機能(JWT) 
-- 検索機能(Laravel Eloquent ORM) 
-- 一覧表示 
-- いいね機能 
-- コメント投稿・表示 
-- 写真投稿(S3) 
+- 認証機能(JWT)
+- 検索機能(Laravel Eloquent ORM)
+- 一覧表示
+- いいね機能
+- コメント投稿・表示
+- 写真投稿(S3)
 
 
 ## 使い方
