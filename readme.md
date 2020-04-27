@@ -1,72 +1,95 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+Ropa.co.js
+==========
+ 
+## 概要
+　アパレルショップとアパレルショップを探す人を繋げるプラットフォームサービスです。ビジネスモデル的にはO2O(Online to Offline)を
+　意識しています。アパレルショップのオーナーは自分の店を当サイトにお店情報を提供します。
+　アパレルショップを探す人はこのサイトを訪れ、検索機能により、お気に入りのアパレルショップを探します。
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+##　使用技術
+ フロントエンド - Vue.js(JavaScript)
+ バックエンド　 - Laravel(PHP)
+ DB           - MySQL
+ AWS          - S3
+ サーバ        - heroku
+ 
+ -ディレクトリ構成-
+ JSファイル　　　/ropa/resources/js/
+ CSSファイル　　 /ropa/resources/sass/
+ コントローラー　/ropa/app/Http/Controllers/
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 機能
+- 認証機能(JWT) 
+- 検索機能(Laravel Eloquent ORM)
+- 一覧表示
+- いいね機能
+- コメント投稿・表示
+- 写真投稿(S3)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 使い方
 
-## Learning Laravel
+-----------------------------
+ アパレルショップを探す人の画面
+-----------------------------
+ ★サイトにアクセス
+ 以下URLにアクセスしてください。
+ https://wwww.ropa.jp/
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+ ★ログイン
+ テストユーザ
+ EMAIL / PASS: test@sample.com / aaaaaaaa
+　
+ ★検索
+ キーワードを入れて検索できます。
+ データがあまり入っていないため、何も入力せずに🔎を押下してください。
+ ショップ一覧画面に遷移します。
+ 
+ ★ショップ一覧画面
+ 任意のお店をクリックしてください。
+ ショップ詳細画面に遷移します。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+ ★ショップ詳細画面
+ いいね機能、コメント機能があります。(ログイン済だと使用可能になります。)
 
-## Laravel Sponsors
+-----------------------------
+ アパレルショップオーナーの管理画面 
+-----------------------------
+ ★サイトにアクセス
+ 以下のURLにアクセスしてください。
+ https://www.ropa.jp/owners
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+ ホーム画面フッターの「店舗を掲載する場合はこちら」からでもアクセスできます。
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+ ★ログイン
+ テストユーザ
+ EMAIL / PASS aaa@sample.com / bbbbbbbb
 
-## Contributing
+ ★店舗詳細変更画面
+ ログイン後、ヘッダーに「店舗情報変更」現が現れるので、押下してください。
+ 画面には登録した情報が変更できるようになっております。
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ ★写真変更画面
+ 写真の登録、削除、カバー写真の変更(一番上に表示される写真)の変更ができます。
+ 任意の写真をクリックすると写真左上にチェックマークがつきます。
+ 選択した写真を画面下の方にあるボタンより操作を行ってください。
 
-## Security Vulnerabilities
+ データ操作はご自由に頂ければ幸いです。
+ 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## インストール
+ 
+```
+$ https://github.com/ropajp/ropajp.git
+$ cd ropa
+$ npm install
+$ npm run dev
+$ open https://www.ropa.jp
+```
+ 
+## 作者
+ 
+[@石田匡助]
+mail to: ibrahimovicaaa@gmail.com
+ 
